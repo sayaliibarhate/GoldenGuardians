@@ -1,0 +1,114 @@
+﻿@page
+@model GoldenGuardians.Pages.RegisterModel
+@{
+	ViewData["Title"] = "Register";
+}
+<head>
+	<style>
+		h1 {
+			color: darkslateblue;
+			font-family: Sans-serif;
+		}
+
+		h4 {
+			padding-top: 15px;
+			font-size: 17px;
+			color: #777777;
+			text-align: center;
+		}
+
+		input[type=submit] {
+			background-color: cornflowerblue;
+			color: ghostwhite;
+			border-radius: 5px;
+			border: 0px;
+			height: 35px;
+			width: 100px;
+			text-align: center;
+			text-decoration: none;
+		}
+
+			input[type=submit]:hover {
+				background-color: darkblue;
+				border: 0px;
+				color: ghostwhite;
+			}
+
+		input[type=text], input[type=password], input[type=email], input[type=text], input[type=number], input[type=tel], select[name=blg] {
+			border-width: 0 0 1px;
+			border-color: rgb(0, 0, 0);
+			width: 100%;
+		}
+
+			input[type=text]:focus, input[type=password]:focus, input[type=email]:focus, input[type=text]:focus, input[type=number]:focus, input[type=tel]:focus, select[name=blg]:focus {
+				background-color: #f0f0f0;
+				color: #000;
+			}
+
+		label {
+			width: 170px;
+			font-size: medium;
+			font-family: sans-serif;
+		}
+
+		.card {
+			resize: both;
+			height: 50%;
+			width: 65%;
+			/*min-width: fit-content;*/
+			border-radius: 10px;
+			border-bottom: 20px white;
+			margin: 0%;
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: 30px;
+			margin-bottom: auto;
+			padding-top: 25px;
+			background: #ffffff;
+			box-shadow: 3px 5px 10px rgb(7, 7, 7);
+			padding-bottom: 50px;
+		}
+	</style>
+
+	<script type="text/javascript">
+		function formvalidate(thisform) {
+			alert("Registered Succesfull!");
+		}
+		</script>
+
+</head>
+<body>
+	<div class="card">
+		<p><h1><center> Registration </center></h1>
+		<p><h4>Welcome! Enter your details below to create an account.</h4></p></center>
+		<form method="post" onsubmit="return formvalidate(this)">
+
+			&nbsp;&nbsp;<label><b> Full Name <font color="#ff2600" size="+0"><sup>*</sup></font> :</b></label>
+			&nbsp;&nbsp;<input type="text" placeholder="First Middle Last" name="name" required><br><br />
+
+			&nbsp;&nbsp;<label><b> Gender<font color="#ff2600" size="+0"><sup>*</sup></font> </b></label>
+			&nbsp;&nbsp;<input type="radio" name="gen" value="Female"> Female
+			&nbsp;&nbsp;<input type="radio" name="gen" value="Male"> Male
+			&nbsp;&nbsp;<input type="radio" name="gen" value="Other"> Other <br><br />
+
+			&nbsp;&nbsp;<label><b> Birth-Date<font color="#ff2600" size="+0"><sup>*</sup></font> :</b></label>
+			&nbsp;&nbsp;<input type="date" name="date" required><br><br>
+
+			&nbsp;&nbsp;<label><b> Phone no.<font color="#ff2600" size="+0"><sup>*</sup></font> :</b></label>
+			&nbsp;&nbsp;<input type="number" placeholder="10 digits" name="phno" required><br><br>
+
+			&nbsp;&nbsp;<label><b> E-mail<font color="#ff2600" size="+0"><sup>*</sup></font> :</b></label>
+			&nbsp;&nbsp;<input type="text" placeholder="abc@gmail.com" name="email" required><br><br>
+
+			&nbsp;&nbsp;<label><b> Password<font color="#ff2600" size="+0"><sup>*</sup></font> :</b></label>
+			&nbsp;&nbsp;<input type="text" placeholder="Enter strong password" name="pass" required><br><br>
+
+			&nbsp;&nbsp;<label><b> City<font color="#ff2600" size="+0"><sup>*</sup></font> :</b></label>
+			&nbsp;&nbsp;<input type="text" placeholder="eg., Pune" name="city" required><br><br>
+
+			<center><input type="submit" class="button" asp-page-handler="Submit" name="submit" value="Sign Up"></center><p>
+		</form>
+		<br><center>Already a member? <a asp-page="/Login">Log in</a></center>
+	</div>
+</body>
+

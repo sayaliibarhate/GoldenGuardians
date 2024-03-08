@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>@ViewData["Title"] - GoldenGuardians</title>
+	<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+	<link rel="stylesheet" href="~/GoldenGuardians.styles.css" asp-append-version="true" />
+</head>
+<body>
+	<header>
+		<nav class="navbar navbar-expand-sm navbar-toggleable-sm  mb-3" >
+			<!--border-bottom box-shadow navbar-light-->
+			<div class="container-fluid">
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://cdn-icons-png.flaticon.com/128/7205/7205468.png" style="height:50px;" /><a class="navbar-brand" asp-area="" asp-page="/Index" style="color: #5C5470;"><p style="font-size: 28px; color: black;  font-weight:bold;">GoldenYears Guardian</p></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+						aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="navbar-collapse collapse d-sm-inline-flex justify-content-between" style="margin-left:15%;">
+					<ul class="navbar-nav flex-grow-1">
+						<li class="nav-item">
+							<a class="nav-link text-dark" asp-area="" asp-page="/Index" style="color: #5C5470;"><img src="https://cdn-icons-png.flaticon.com/128/263/263115.png" style="height:22px;">&nbsp;Home</a>
+						</li>&nbsp;&nbsp;&nbsp;&nbsp;
+						<li class="nav-item">
+							<a class="nav-link text-dark" asp-area="" asp-page="/AboutUs" style="color: #5C5470;"><img src="https://cdn-icons-png.flaticon.com/128/1665/1665646.png" style="height:22px;">&nbsp;About Us</a>
+						</li>&nbsp;&nbsp;&nbsp;&nbsp;
+						<li class="nav-item">
+							<a class="nav-link text-dark" asp-area="" asp-page="/Services" style="color: #5C5470;"><img src="https://cdn-icons-png.flaticon.com/128/2058/2058768.png" style="height:22px;">&nbsp;Services</a>
+						</li>&nbsp;&nbsp;&nbsp;&nbsp;
+						<li class="nav-item">
+							<a class="nav-link text-dark" asp-area="" asp-page="/Gallery" style="color: #5C5470;"><img src="https://cdn-icons-png.flaticon.com/128/3394/3394388.png" style="height:22px;">&nbsp;Gallery</a>
+						</li>&nbsp;&nbsp;&nbsp;&nbsp;
+						<li class="nav-item">
+							<a class="nav-link text-dark" asp-area="" asp-page="/Booking" style="color: #5C5470;"><img src="https://cdn-icons-png.flaticon.com/128/2636/2636428.png" style="height:22px;">&nbsp;Make Booking</a>
+						</li>&nbsp;&nbsp;&nbsp;&nbsp;
+						<li class="nav-item">
+							<a class="nav-link text-dark" asp-area="" asp-page="/ContactUs" style="color: #5C5470;"><img src="https://cdn-icons-png.flaticon.com/128/3059/3059408.png" style="height:22px;">&nbsp;Contact Us</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<style>
+
+			header {
+				background: #F2E3DB;
+				position: sticky;
+				top: 0;
+				height : 80px;
+			}
+
+			.change-color {
+				border-bottom: 0.5px solid #EDEDED;
+			}
+		</style>
+	</header>
+	<div class="container">
+		<main role="main" class="pb-3">
+			@RenderBody()
+		</main>
+	</div>
+
+	<footer class="border-top footer text-muted">
+		<div class="container">
+			&copy; 2024 &nbsp; <a asp-area="" asp-page="/Index">GoldenYears Guardian</a>
+		</div>
+		<style>
+			footer {
+				height: 70px;
+				background: #F2E3DB;
+			}
+		</style>
+	</footer>
+
+	<script src="~/lib/jquery/dist/jquery.min.js"></script>
+	<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="~/js/site.js" asp-append-version="true"></script>
+
+	
+
+	@await RenderSectionAsync("Scripts", required: false)
+
+	<style>
+		body {
+			background-color: white;
+		}
+	</style>
+
+</body>
+</html>

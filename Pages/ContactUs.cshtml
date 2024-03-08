@@ -1,0 +1,67 @@
+﻿@page
+@model GoldenGuardians.Pages.ContactUsModel
+@{
+	ViewData["Title"] = "Contact Us";
+}
+
+<body>
+	<br /><div class="row">
+		<div class="col-md-6 left-img"><img src="https://www.aurumliving.com/blog/wp-content/uploads/2021/07/Old-Age-Home.jpg" class="header-img"></div>
+		<div class="col-md-6 col-lg-5 ml-auto flex-center mt-4 mt-md-0">
+			<div class="home-page-content">
+				<h1 class="home-sub-title  mb25"> Contact-us </h1>
+				<div class="">
+					<p><b>ADDRESS:</b> <br> Pune Main Road, <br> Pune District - 411019, Maharashtra, <br> INDIA.</p>
+					<p><b>PHONE:</b><br>  +91-8976567876</p>
+					<p><b>EMAIL:</b><br><a href="mailto:askgoldenyears@gmail.com">askgoldenyears@gmail.com</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<br>
+	<br>
+	<h3>Feel free to ask us your queries <img src="https://cdn-icons-png.flaticon.com/128/3240/3240831.png" style="height:50px;"></h3>
+	<br>
+	<div class="contact-form">
+		<!--<h4 class="home-sub-title ">Enquiry Form</h4>-->
+		<form asp-page="/ContactUs" method="post">
+			<div class="form-group row">
+				<label class="col-sm-4 col-form-label">Your Name: <b><font color="#ff2600" size="+1"><sup>*</sup></font></b></label>
+				<div class="col-sm-6">
+					<input type="name" name="name" class="form-control" required />
+				</div>
+			</div><br>
+			<div class="form-group row">
+				<label class="col-sm-4 col-form-label">Your E-mail: <b><font color="#ff2600" size="+1"><sup>*</sup></font></b></label>
+				<div class="col-sm-6">
+					<input type="email" name="email" class="form-control" required />
+				</div>
+			</div><br>
+			<div class="form-group row">
+				<label class="col-sm-4 col-form-label">Contact No : <b><font color="#ff2600" size="+1"><sup>*</sup></font></b></label>
+				<div class="col-sm-6">
+					<input type="phone" name="phone" class="form-control" required />
+				</div>
+			</div><br>
+			<div class="form-group row">
+				<label class="col-sm-4 col-form-label">Your Message : <b><font color="#ff2600" size="+1"><sup>*</sup></font></b></label>
+				<div class="col-sm-6">
+					<textarea name="subject" class="form-control" rows="1" required /></textarea>
+				</div>
+			</div><br>
+			<div class="form-group row">
+				<div class="col-sm-12">
+					<button name="Submit" class="btn btn-primary">SEND</button>
+				</div>
+			</div>
+		</form>
+	</div>
+
+	<style>
+		.header-img {
+			width: 600px;
+		}
+	</style>
+
+</body>

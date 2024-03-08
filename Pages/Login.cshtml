@@ -1,0 +1,125 @@
+﻿@page
+@model GoldenGuardians.Pages.LoginModel
+@{
+	ViewData["Title"] = "Login Page";
+}
+
+<head>
+    <script type="text/javascript">
+        function formvalidate(thisform) {
+            var email = thisform.value.value;
+            var pass = thisform.pass.value;
+            if (email == null || email == "") {
+                alert("Please enter your Email!");
+                thisform.value.focus();
+                return false;
+            }
+            else if (email.length < 15) {
+                alert("Email must contains atleast 6 characters!");
+                thisform.value.focus();
+                return false;
+            }
+            else if (pass == null || pass == "") {
+                alert("Please enter your password!");
+                thisform.pass.focus();
+                return false;
+            }
+            else if (pass.length < 6) {
+                alert("Password must contains atleast 6 characters!");
+                thisform.pass.focus();
+                return false;
+            }
+            else {
+                alert("Login Succesfull!");
+            }
+            return true;
+        }
+    </script>
+
+    <style>
+        h1 {
+            color: #503C3C;
+            padding-top: 30px;
+        }
+
+        input[type=submit] {
+            background-color: #637E76;
+            color: ghostwhite;
+            border-radius: 5px;
+            border: 0px;
+            height: 35px;
+            width: 180px;
+            text-align: center;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+
+            input[type=submit]:hover {
+                background-color: darkblue;
+                border: 0px;
+                color: ghostwhite;
+            }
+
+        .fcontrol {
+            border-radius: 2px;
+            border-style: none;
+            border-bottom: 1px black solid;
+            margin-left: 40px;
+            padding: 10px;
+        }
+
+        input[type=email]:focus, input[type=password]:focus {
+            border: 1px gray solid;
+        }
+
+        label {
+            margin-left: 35px;
+            width: 100px;
+            font-size: large;
+        }
+
+        body {
+            background-color: grey;
+            background-image: url('https://plus.unsplash.com/premium_photo-1661574786961-5616e8d055c4?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8b2xkJTIwYWdlJTIwaG9tZXxlbnwwfHwwfHx8MA%3D%3D');
+            font-family: 'Times New Roman', Times, serif;
+            background-size: cover;
+        }
+
+        .card {
+            height: 400px;
+            width: 550px;
+            border-radius: 20px;
+            margin: 0%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 100px;
+            margin-bottom: auto;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 3px 5px 10px rgb(73, 73, 73);
+        }
+
+    </style>
+</head>
+
+<body>
+	<div class="container-fluid">
+		<div class="card border-dark">
+			<form method="post" onsubmit="return formvalidate(this)">
+				<center>
+					<p><h1>Login</h1></p>
+				</center>
+
+				<label ><br><b>E-mail:</b><font color="#ff2600"><sup>*</sup></font> </label>
+				<input type="email" class="fcontrol" placeholder="Registered e-mail" name="email"> <br>
+
+
+				<label><br><b> Password:<font color="#ff2600"><sup>*</sup></font></b></label>
+				<input type="password" class="fcontrol" placeholder="Enter strong password" name="pass"> <br>
+
+				<br><center><input type="submit" class="button" name="submit" value="Log in"></center><br>
+				<center><p>Not a member? <a asp-page="/Register">Register</a></p></center> 
+			</form>
+		</div>
+	</div>
+</body>
