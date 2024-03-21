@@ -53,7 +53,7 @@
 
 		.card {
 			resize: both;
-			height: 50%;
+			height: 80%;
 			width: 65%;
 			/*min-width: fit-content;*/
 			border-radius: 10px;
@@ -83,27 +83,27 @@
 		<p><h4>Welcome! Enter your details below to create an account.</h4></p></center>
 		<form method="post" onsubmit="return formvalidate(this)">
 
-			&nbsp;&nbsp;<label><b> Full Name <font color="#ff2600" size="+0"><sup>*</sup></font> :</b></label>
+			&nbsp;&nbsp;<label><b> Full Name: <font color="#ff2600" size="+0"><sup>*</sup></font> </b></label>
 			&nbsp;&nbsp;<input type="text" placeholder="First Middle Last" name="name" required><br><br />
 
-			&nbsp;&nbsp;<label><b> Gender<font color="#ff2600" size="+0"><sup>*</sup></font> </b></label>
+			&nbsp;&nbsp;<label><b> Gender: <font color="#ff2600" size="+0"><sup>*</sup></font> </b></label>
 			&nbsp;&nbsp;<input type="radio" name="gen" value="Female"> Female
 			&nbsp;&nbsp;<input type="radio" name="gen" value="Male"> Male
 			&nbsp;&nbsp;<input type="radio" name="gen" value="Other"> Other <br><br />
 
-			&nbsp;&nbsp;<label><b> Birth-Date<font color="#ff2600" size="+0"><sup>*</sup></font> :</b></label>
+			&nbsp;&nbsp;<label><b> Birth-Date: <font color="#ff2600" size="+0"><sup>*</sup></font> </b></label>
 			&nbsp;&nbsp;<input type="date" name="date" required><br><br>
 
-			&nbsp;&nbsp;<label><b> Phone no.<font color="#ff2600" size="+0"><sup>*</sup></font> :</b></label>
+			&nbsp;&nbsp;<label><b> Phone no.: <font color="#ff2600" size="+0"><sup>*</sup></font> </b></label>
 			&nbsp;&nbsp;<input type="number" placeholder="10 digits" name="phno" required><br><br>
 
-			&nbsp;&nbsp;<label><b> E-mail<font color="#ff2600" size="+0"><sup>*</sup></font> :</b></label>
+			&nbsp;&nbsp;<label><b> E-mail: <font color="#ff2600" size="+0"><sup>*</sup></font> </b></label>
 			&nbsp;&nbsp;<input type="text" placeholder="abc@gmail.com" name="email" required><br><br>
 
-			&nbsp;&nbsp;<label><b> Password<font color="#ff2600" size="+0"><sup>*</sup></font> :</b></label>
+			&nbsp;&nbsp;<label><b> Password: <font color="#ff2600" size="+0"><sup>*</sup></font> </b></label>
 			&nbsp;&nbsp;<input type="text" placeholder="Enter strong password" name="pass" required><br><br>
 
-			&nbsp;&nbsp;<label><b> City<font color="#ff2600" size="+0"><sup>*</sup></font> :</b></label>
+			&nbsp;&nbsp;<label><b> City: <font color="#ff2600" size="+0"><sup>*</sup></font> </b></label>
 			&nbsp;&nbsp;<input type="text" placeholder="eg., Pune" name="city" required><br><br>
 
 			<center><input type="submit" class="button" asp-page-handler="Submit" name="submit" value="Sign Up"></center><p>

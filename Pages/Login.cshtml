@@ -1,7 +1,8 @@
 ﻿@page
 @model GoldenGuardians.Pages.LoginModel
+@addTagHelper*, Microsoft.AspNetCore.Mvc.TagHelpers
 @{
-	ViewData["Title"] = "Login Page";
+    ViewData["Title"] = "Login";
 }
 
 <head>
@@ -14,17 +15,17 @@
                 thisform.value.focus();
                 return false;
             }
-            else if (email.length < 15) {
+            if (email.length < 15) {
                 alert("Email must contains atleast 6 characters!");
                 thisform.value.focus();
                 return false;
             }
-            else if (pass == null || pass == "") {
+            if (pass == null || pass == "") {
                 alert("Please enter your password!");
                 thisform.pass.focus();
                 return false;
             }
-            else if (pass.length < 6) {
+            if (pass.length < 6) {
                 alert("Password must contains atleast 6 characters!");
                 thisform.pass.focus();
                 return false;
@@ -105,13 +106,13 @@
 <body>
 	<div class="container-fluid">
 		<div class="card border-dark">
-			<form method="post" onsubmit="return formvalidate(this)">
+			<form method="post" asp-page-handler="OnSuccessfulLogin" onsubmit="return formvalidate(this)">
 				<center>
 					<p><h1>Login</h1></p>
 				</center>
 
 				<label ><br><b>E-mail:</b><font color="#ff2600"><sup>*</sup></font> </label>
-				<input type="email" class="fcontrol" placeholder="Registered e-mail" name="email"> <br>
+                <input type="email" class="fcontrol" placeholder="Registered e-mail" name="email"> <br>
 
 
 				<label><br><b> Password:<font color="#ff2600"><sup>*</sup></font></b></label>

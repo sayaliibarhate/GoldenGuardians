@@ -28,7 +28,7 @@ namespace GoldenGuardians.Pages
 
 				//Inserting values
 				MySqlCommand comm = con.CreateCommand();
-				comm.CommandText = "INSERT INTO reg(name,gender,date,phoneno,email,password,city) VALUES(?name, ?gender, ?date, ?phoneno, ?email, ?password, ?city)";
+				comm.CommandText = "INSERT INTO members(name,gender,date,phoneno,email,password,city) VALUES(?name, ?gender, ?date, ?phoneno, ?email, ?password, ?city)";
 
 				comm.Parameters.AddWithValue("?name", name);
 				comm.Parameters.AddWithValue("?gender", gender);
