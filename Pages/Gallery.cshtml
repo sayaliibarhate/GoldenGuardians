@@ -3,3 +3,71 @@
 @{
 	ViewData["Title"] = "Gallery";
 }
+
+<body>
+	<section id="reception">
+		<h2>Reception Area</h2>
+		<div class="image-container">
+			<img src="~/css/gallery images/1.jpg" />
+			<img src="~/css/gallery images/12.jpg" />
+			<img src="~/css/gallery images/6.jpg" />
+		</div>
+	</section>
+	<section id="amenities">
+		<h2>Amenities</h2>
+		<div class="image-container">
+			<img src="~/css/gallery images/3.jpg" />
+			<img src="~/css/gallery images/5.jpg" />
+			<img src="~/css/gallery images/11.jpg" />
+
+		</div>
+		<div class="image-container">
+			<img src="~/css/gallery images/4.jpg" />
+			<img src="~/css/gallery images/13.jpg" />
+			<img src="~/css/gallery images/14.jpg" />
+		</div>
+	</section>
+
+	<section id="layout">
+		<h2>Layout</h2>
+		<div class="image-container">
+			<img src="~/css/gallery images/2.jpg" />
+			<img src="~/css/gallery images/7.jpg" />
+			<img src="~/css/gallery images/8.jpg" />
+		</div>
+	</section>
+</body>
+
+<style>
+
+	main {
+		padding: 20px;
+	}
+
+	section {
+		margin-bottom: 40px;
+	}
+
+	h2 {
+		text-align: center;
+	}
+
+	.image-container {
+		display: flex;
+		justify-content: space-around;
+		margin-top: 20px;
+	}
+
+	img {
+		max-width: 30%;
+		max-height: 20%;
+	}
+
+	body {
+		background-image: url('https://img.freepik.com/premium-photo/yellow-orange-gradient-watercolor-background_627530-104.jpg?size=626&ext=jpg&ga=GA1.1.34264412.1712361600&semt=ais');
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-size: cover;
+	}
+
+</style>

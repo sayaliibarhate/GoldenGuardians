@@ -3,4 +3,227 @@
 @{
 	ViewData["Title"] = "Make Booking";
 }
-<p>hhhh</p>
+
+<body>
+
+<div class="whatsapp_main">
+	<a href="https://call.whatsapp.com/voice/Clyujd4lOtYyxXjBzdkNwH" target="_blank"><img src="~/css/whatsapp icon.jpeg" width="50px;" height="50px;" class="whatsapp_img" /></a>
+</div>
+<style>
+	.whatsapp_main {
+		position: fixed;
+		bottom: 80px;
+		right: 20px;
+		text-align: right;
+		z-index: 10;
+	}
+
+		.heading {
+			color: black;
+			text-align: center;
+			background: rgba(20,40,100,0.05);
+			font-family: Montserrat;
+		}
+</style>
+
+	<div class="heading" style=" font-family: Montserrat;">
+		<br />
+		<h1>Plans & Pricing - </h1>
+		<h2>Choose the right package for you</h2>
+		<br />
+	</div>
+<br />
+
+<div>
+	<div class="row">
+		<div class="col-md-6" style="text-align:center;">
+			<div class="card">
+				<br />
+				<h4 style="font-family:Montserrat;">
+					<b>
+						1 BHK Flat <br />
+						Starting from <span>&#8377;</span> 60 Lakhs
+					</b>
+				</h4>
+				<p style="font-family:Montserrat; font-size:20px;">
+					Registration 30,000 /- (Non Refundable)<br />
+					Advance Check required<br />
+					No on time cancellation of flats<br />
+					30 Days Prior Notice before shifting
+				</p>
+				<a href="#booking" role="button">
+					Book Now
+				</a><br />
+			</div>
+		</div>
+
+		<div class="col-md-6" style="text-align:center;">
+			<div class="card">
+				<br />
+				<h4 style="font-family:Montserrat;">
+					<b>
+						2 BHK Flats <br />
+						Starting from <span>&#8377;</span> 80 Lakhs
+					</b>
+				</h4>
+				<p style="font-family:Montserrat; font-size:20px;">
+					R
+					egistration 30,000 /- (Non Refundable)<br />
+					Advance Check required<br />
+					No on time cancellation of rowhouses<br />
+					30 Days Prior Notice before shifting
+				</p>
+				<a href="#booking" role="button">
+					Book Now
+				</a><br />
+			</div>
+		</div>
+	</div>
+</div>
+<br />
+<br />
+
+
+<div>
+	<div class="row">
+		<div class="col-md-6" style="text-align:center;">
+			<div class="card">
+				<br />
+				<h4 style="font-family:Montserrat;">
+					<b>
+						Rowhouses <br />
+						Starting from <span>&#8377;</span> 1.2 Crore
+					</b>
+				</h4>
+				<p style="font-family:Montserrat; font-size:20px;">
+					Registration 30,000 /- (Non Refundable)<br />
+					Advance Check required<br />
+					No on time cancellation of flats<br />
+					30 Days Prior Notice before shifting
+				</p>
+				<a href="#booking" role="button">
+					Book Now
+				</a><br />
+			</div>
+		</div>
+
+		<div class="col-md-6" style="text-align:center;">
+			<div class="card">
+				<br />
+				<h4 style="font-family:Montserrat;">
+					<b>
+						FarmHouses <br />
+						Starting from <span>&#8377;</span> 2 Crore
+					</b>
+				</h4>
+				<p style="font-family:Montserrat; font-size:20px;">
+					Registration 50,000 /- (Non Refundable)<br />
+					Advance Check<br />
+					No on time cancellation of Farmhouse<br />
+					30 Days Prior Notice before shifting
+				</p>
+				<a href="#booking" role="button">
+					Book Now
+				</a><br />
+			</div>
+		</div>
+	</div>
+</div>
+<br />
+<br />
+<br />
+<br />
+
+<section>
+	<div class="card" style="text-align:center;">
+
+		<div class="elementor-widget-container">
+			<div id="booking" class="elementor-menu-anchor"></div>
+		</div>
+
+		<h1 style="font-family:Montserrat;">BOOKING FORM</h1>
+		<h3 style="font-family:Montserrat;">Kindly fill all the correct details of the Senior Citizen as it may be needed for further use!!!!</h3>
+
+		<div>
+			<form method="post">
+
+				<br /><label><b> Full Name: <font color="#ff2600" size="+0"><sup>*</sup></font> </b></label>
+				<input type="text" placeholder="First Middle Last" name="sname" required><br><br />
+
+				<label><b> Relationship with Senior Citizen: <font color="#ff2600" size="+0"><sup>*</sup></font> </b></label>
+				<input type="text" placeholder="e.g. Mother/Father/Uncle" name="srel" required><br><br />
+
+				<label><b> Type of Package: <font color="#ff2600" size="+0"><sup>*</sup></font> </b></label><br />
+				<input type="radio" name="package" value="1bhk"> 1 BHK Flat<br />
+				<input type="radio" name="package" value="2bhk"> 2 BHK Flat<br />
+				<input type="radio" name="package" value="rowhouse"> RowHouse<br />
+				<input type="radio" name="package" value="farmhouse"> FarmHouse <br><br />
+
+				<label><b> Mobile no.: <font color="#ff2600" size="+0"><sup>*</sup></font> </b></label>
+				<input type="number" placeholder="10 digits" name="mno" required><br><br>
+
+				<label><b> Mobile no.: <font color="#ff2600" size="+0"><sup>*</sup></font> </b></label>
+				<input type="number" placeholder="10 digits" name="smno" required><br><br>
+
+				<label><b> E-mail: <font color="#ff2600" size="+0"><sup>*</sup></font> </b></label>
+				<input type="text" placeholder="abc@gmail.com" name="semail" required><br><br>
+
+				<label><b> Blood Group: <font color="#ff2600" size="+0"><sup>*</sup></font> </b></label>
+				<input type="text" placeholder="e.g. B+ve" name="sbloodgrp" required><br><br>
+
+				<label><b> Medical History: <font color="#ff2600" size="+0"><sup>*</sup></font> </b></label>
+				<input type="file" placeholder="" name="medfile" required><br><br>
+
+				<input type="submit" class="button" asp-page-handler="Submit" name="submit" value="Make a Booking">
+				<br />
+				<br />
+			</form>
+		</div>
+
+	</div>
+</section>
+<br />
+<br />
+
+</body>
+
+<style>
+	section > div.card {
+		box-shadow: 3px 5px 10px rgb(7, 7, 7);
+		background-color: #F1E4C3;
+	}
+
+	div > div.card{
+		background-color: #FFFFEC;
+	}
+
+	label {
+		font-family: Montserrat;
+		font-size: 20px;
+	}
+	body{
+		background-image: url('https://d28pk2nlhhgcne.cloudfront.net/assets/app/uploads/sites/3/2021/08/homebyme-homepage-gallery-1.jpeg');
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-size: cover;
+	}
+	
+	input[type=submit] {
+		background-color: #E8C872;
+		border-radius: 5px;
+		border: 0px;
+		height: 40px;
+		width: 250px;
+		text-align: center;
+		text-decoration: none;
+		font-family: Montserrat;
+		font-size: 20px;
+	}
+
+		input[type=submit]:hover {
+			background-color: #FDE767;
+			border: 0px;
+		}
+
+</style>
+
