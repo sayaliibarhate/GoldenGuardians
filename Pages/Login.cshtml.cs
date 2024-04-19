@@ -23,13 +23,13 @@ namespace GoldenGuardians.Pages
 		{
 			string email = Request.Form["email"];
 			string password = Request.Form["pass"];
-
+			string utype = Request.Form["utype"];
 			using (MySqlConnection con = new MySqlConnection("server=localhost;username=root;database=gyg;port=3306;password=sau@271202"))
 			{
 				//opening connection
 				con.Open();
 
-				string query = "select * from members where email = ?email and password = ?password";
+				string query = "select utype from members where email = ?email and password = ?password";
 
 
 
@@ -37,22 +37,35 @@ namespace GoldenGuardians.Pages
 				cmd.Parameters.AddWithValue("?email", email);
 				cmd.Parameters.AddWithValue("?password", password);
 
-				int i = cmd.ExecuteNonQuery();
+				var i  = cmd.ExecuteScalar()?.ToString();
 				con.Close();
 
-				if (i == 1)
-				{
-					return RedirectToPage("/Profile");
-				}
-				else
-				{
-					return RedirectToPage("/Login");
-				}
-				con.Close(); 
+                if (!string.IsNullOrEmpty(utype))
+                {
+                    // Redirect based on the user type
+                    switch (i)
+                    {
+                        case "Admin":
+                            return RedirectToPage("/AdminProfile");
+                        case "Advisor":
+                            return RedirectToPage("/AdvisorProfile");
+                        case "Client":
+                            return RedirectToPage("/UserProfile");
+                        default:
+                            return RedirectToPage("/Login"); // Redirect to login if no matching utype found
+                    }
+                }
+                else
+                {
+                    return RedirectToPage("/Login"); // Redirect to login if no record found matching the credentials
+                }
+            }
+        }
 
-			}
+    }
 
 		}
 
-	}
-}
+
+
+

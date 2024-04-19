@@ -25,11 +25,12 @@
                 thisform.pass.focus();
                 return false;
             }
-            if (pass.length < 6) {
+            if (pass.length < 6) {  
                 alert("Password must contains atleast 6 characters!");
                 thisform.pass.focus();
                 return false;
             }
+
             else {
                 alert("Login Succesfull!");
             }
@@ -87,7 +88,7 @@
         }
 
         .card {
-            height: 400px;
+            height: 450px;
             width: 550px;
             border-radius: 20px;
             margin: 0%;
@@ -103,11 +104,7 @@
     </style>
 </head>
 
-<script type="text/javascript">
-    function formvalidate(thisform) {
-        alert("Login Succesfull!!!!!");
-    }
-</script>
+
 
 <body>
 	<div class="container-fluid">
@@ -117,6 +114,9 @@
 					<p><h1>Login</h1></p>
 				</center>
 
+                <br />&nbsp;&nbsp;<input type="radio" name="utype" value="Admin"> Admin
+                &nbsp;&nbsp;<input type="radio" name="utype" value="Advisor"> Advisor
+                &nbsp;&nbsp;<input type="radio" name="utype" value="Client"> Client<br />
 				<label ><br><b>E-mail:</b><font color="#ff2600"><sup>*</sup></font> </label>
                 <input type="email" class="fcontrol" placeholder="Registered e-mail" name="email"> <br>
 

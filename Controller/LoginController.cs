@@ -27,7 +27,7 @@ namespace GoldenGuardians.Controllers
         [AllowAnonymous]
         [HttpPost]
 
-        public IActionResult Login([FromBody] UserLogin UserLogin)
+        public IActionResult Login([FromBody] Login UserLogin)
         {
             var email = Authenticate(UserLogin);
 
@@ -68,11 +68,11 @@ namespace GoldenGuardians.Controllers
             return new JwtSecurityTokenHandler().WriteToken(token);//call the handler and pass the token
         }
 
-        private Register? Authenticate(UserLogin UserLogin)
+        private Register? Authenticate(Login UserLogin)
         {
 
             var currentUser = Userconstants.Users.FirstOrDefault(o => o.Email.ToLower() ==
-             UserLogin.Email.ToLower() && o.Pass == UserLogin.Pass);
+             UserLogin.email.ToLower() && o.Pass == UserLogin.password);
 
             if (currentUser != null)
             {

@@ -20,6 +20,7 @@ namespace GoldenGuardians.Pages
 			string email = Request.Form["email"];
 			string password = Request.Form["pass"];
 			string city = Request.Form["city"];
+			string utype = Request.Form["utype"];
 
 			using (MySqlConnection con = new MySqlConnection("server=localhost;username=root;database=gyg;port=3306;password=sau@271202"))
 			{
@@ -28,7 +29,7 @@ namespace GoldenGuardians.Pages
 
 				//Inserting values
 				MySqlCommand comm = con.CreateCommand();
-				comm.CommandText = "INSERT INTO members(name,gender,date,phoneno,email,password,city) VALUES(?name, ?gender, ?date, ?phoneno, ?email, ?password, ?city)";
+				comm.CommandText = "INSERT INTO members(name,gender,date,phoneno,email,password,city,utype) VALUES(?name, ?gender, ?date, ?phoneno, ?email, ?password, ?city,?utype)";
 
 				comm.Parameters.AddWithValue("?name", name);
 				comm.Parameters.AddWithValue("?gender", gender);
@@ -37,7 +38,7 @@ namespace GoldenGuardians.Pages
 				comm.Parameters.AddWithValue("?email", email);
 				comm.Parameters.AddWithValue("?password", password);
 				comm.Parameters.AddWithValue("?city", city);
-
+				comm.Parameters.AddWithValue("?utype", utype);
 				//passing the query and connection var to command
 				//MySqlCommand cmd = new MySqlCommand(query, con);
 

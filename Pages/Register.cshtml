@@ -91,6 +91,10 @@
 		<p><h1><center> Registration </center></h1>
 		<p><h4>Welcome! Enter your details below to create an account.</h4></p></center>
 		<form method="post" onsubmit="return formvalidate(this)">
+			&nbsp;&nbsp;<label><b> User Type: <font color="#ff2600" size="+0"><sup>*</sup></font> </b></label>
+			
+			&nbsp;&nbsp;<input type="radio" name="utype" value="Advisor"> Advisor
+			&nbsp;&nbsp;<input type="radio" name="utype" value="Client"> Client<br /><br />
 
 			&nbsp;&nbsp;<label><b> Full Name: <font color="#ff2600" size="+0"><sup>*</sup></font> </b></label>
 			&nbsp;&nbsp;<input type="text" placeholder="First Middle Last" name="name" required><br><br />
@@ -110,7 +114,7 @@
 			&nbsp;&nbsp;<input type="text" placeholder="abc@gmail.com" name="email" required><br><br>
 
 			&nbsp;&nbsp;<label><b> Password: <font color="#ff2600" size="+0"><sup>*</sup></font> </b></label>
-			&nbsp;&nbsp;<input type="text" placeholder="Enter strong password" name="pass" required><br><br>
+			&nbsp;&nbsp;<input type="password" placeholder="Enter strong password" name="pass" required><br><br>
 
 			&nbsp;&nbsp;<label><b> City: <font color="#ff2600" size="+0"><sup>*</sup></font> </b></label>
 			&nbsp;&nbsp;<input type="text" placeholder="eg., Pune" name="city" required><br><br>
