@@ -4,6 +4,12 @@
 	ViewData["Title"] = "Make Booking";
 }
 
+<script type="text/javascript">
+	function formvalidate(thisform) {
+		alert("Booking Successfully, Kindly wait till further notification!!!!!!!");
+	}
+</script>
+
 <body>
 
 <div class="whatsapp_main">
@@ -145,7 +151,7 @@
 		<h3 style="font-family:Montserrat;">Kindly fill all the correct details of the Senior Citizen as it may be needed for further use!!!!</h3>
 
 		<div>
-			<form method="post">
+				<form method="post" onsubmit="return formvalidate(this)">
 
 				<br /><label><b> Full Name: <font color="#ff2600" size="+0"><sup>*</sup></font> </b></label>
 				<input type="text" placeholder="First Middle Last" name="sname" required><br><br />
@@ -160,9 +166,6 @@
 				<input type="radio" name="package" value="farmhouse"> FarmHouse <br><br />
 
 				<label><b> Mobile no.: <font color="#ff2600" size="+0"><sup>*</sup></font> </b></label>
-				<input type="number" placeholder="10 digits" name="mno" required><br><br>
-
-				<label><b> Mobile no.: <font color="#ff2600" size="+0"><sup>*</sup></font> </b></label>
 				<input type="number" placeholder="10 digits" name="smno" required><br><br>
 
 				<label><b> E-mail: <font color="#ff2600" size="+0"><sup>*</sup></font> </b></label>
@@ -172,7 +175,7 @@
 				<input type="text" placeholder="e.g. B+ve" name="sbloodgrp" required><br><br>
 
 				<label><b> Medical History: <font color="#ff2600" size="+0"><sup>*</sup></font> </b></label>
-				<input type="file" placeholder="" name="medfile" required><br><br>
+				<input type="text" placeholder=" " name="medhist" required><br><br>
 
 				<input type="submit" class="button" asp-page-handler="Submit" name="submit" value="Make a Booking">
 				<br />

@@ -103,10 +103,16 @@
     </style>
 </head>
 
+<script type="text/javascript">
+    function formvalidate(thisform) {
+        alert("Login Succesfull!!!!!");
+    }
+</script>
+
 <body>
 	<div class="container-fluid">
 		<div class="card border-dark">
-			<form method="post" asp-page-handler="OnSuccessfulLogin" onsubmit="return formvalidate(this)">
+            <form method="post" asp-page-handler="OnSuccessfulLogin" onsubmit="return formvalidate(this)">
 				<center>
 					<p><h1>Login</h1></p>
 				</center>
