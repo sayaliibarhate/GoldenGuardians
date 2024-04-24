@@ -24,6 +24,7 @@ namespace GoldenGuardians.Pages
 			string email = Request.Form["email"];
 			string password = Request.Form["pass"];
 			string utype = Request.Form["utype"];
+
 			using (MySqlConnection con = new MySqlConnection("server=localhost;username=root;database=gyg;port=3306;password=sau@271202"))
 			{
 				//opening connection

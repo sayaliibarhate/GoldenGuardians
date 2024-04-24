@@ -1,5 +1,38 @@
 ﻿@page
 @model GoldenGuardians.Pages.AdminProfileModel
 @{
-	<h1>admin</h1>
+	ViewData["Title"] = "Admin";
 }
+<br /><br />
+
+<br />
+<h2>Clients</h2>
+<table class="table">
+	<thead>
+		<tr>
+			<th>Purchase Id</th>
+			<th>Name</th>
+			<th>Email</th>
+			<th>Mobile no</th>
+			<th>Package</th>
+			<th>Relation</th>
+			<th>Blood group</th>
+			<th>Medical History</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var admin in Model.clients)
+		{
+			<tr>
+				<td>@admin.Id</td>
+				<td>@admin.Name</td>
+				<td>@admin.Email</td>
+				<td>@admin.Mobileno</td>
+				<td>@admin.Package</td>
+				<td>@admin.Relation</td>
+				<td>@admin.Bloodgrp</td>
+				<td>@admin.Medicalhist</td>
+			</tr>
+		}
+	</tbody>
+</table>
